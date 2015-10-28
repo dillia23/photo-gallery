@@ -1,0 +1,100 @@
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: #CCCCCC;
+}
+
+.photoBox {
+	height:100vw;
+}
+
+.navSection {
+    position: relative;
+    padding: 5px;
+}
+
+.photoList {
+    border: 13px solid #CCCC99;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 0;
+}
+
+.photos {
+	display: inline-block;
+	border: 1px solid black;
+	margin: 10px;
+	width: 200px;
+	height: 200px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+}
+
+.photoCaption {
+	text-align: center;
+	background-color: white;
+	opacity: .75;
+	position: absolute;
+	bottom: 0;                       
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#selectedPhoto {
+	height: calc(40% - 210px);
+	margin: auto;
+    width: calc(50% - 20px);
+    background-color: black;    
+    border: 13px solid #003366;
+	overflow: hidden;
+	position: relative;
+	min-width: 200px;
+	min-height: 200px;
+}
+
+#selectedPhoto img {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	position: absolute;               
+    top: 50%;                       
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.photos:hover, .arrow-right:hover, .arrow-left:hover {
+	cursor: pointer;
+}
+
+.active {
+	border: 5px solid white !important;
+}
+
+.hideItem {
+	display: none;
+}
+
+.arrow {
+	width: 0; 
+	height: 0; 
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+	opacity: .8;
+	z-index: 10;
+	position: absolute;
+	top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow-left {
+	border-right:30px solid white;
+	left: 1%;
+}
+
+.arrow-right {
+	border-left: 30px solid white;
+	right: 0;
+}
