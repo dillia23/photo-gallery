@@ -1,6 +1,6 @@
 body {
 	font-family: Verdana, Geneva, sans-serif;
-	background-color: #CCCCCC;
+	background-color: #e9eaed;
 }
 
 .photoBox {
@@ -43,15 +43,15 @@ body {
 }
 
 #selectedPhoto {
-	height: calc(40% - 210px);
+	height: calc(50% - 210px);
 	margin: auto;
     width: calc(50% - 20px);
     background-color: black;    
     border: 13px solid #003366;
 	overflow: hidden;
 	position: relative;
-	min-width: 200px;
-	min-height: 200px;
+	min-width: 300px;
+	min-height: 300px;
 }
 
 #selectedPhoto img {
@@ -97,4 +97,15 @@ body {
 .arrow-right {
 	border-left: 30px solid white;
 	right: 0;
+}
+
+@media only screen and (max-device-width: 480px) {
+	#selectedPhoto {
+		width: calc(100% - 10px);
+		height: 70%;
+	}
+
+	.photoCaption {
+		font-size: 200%;
+	}
 }
